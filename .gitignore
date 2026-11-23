@@ -1,0 +1,3 @@
+# Owner notes and tooling stay local; only the public pages are published.
+README.md
+check-publish.mjs

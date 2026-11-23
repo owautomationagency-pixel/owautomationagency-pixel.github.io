@@ -1,0 +1,17 @@
+/* Additions for the public brochure site. site.css is copied unchanged from the product. */
+.ow-plans { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; margin-top: 1.5rem; }
+.ow-plan { background: var(--ow-surface); border: 1px solid var(--ow-line); border-radius: 6px; padding: 1.25rem; display: flex; flex-direction: column; gap: .5rem; }
+.ow-plan-featured { border-color: var(--ow-green); box-shadow: 0 0 0 1px var(--ow-green) inset; }
+.ow-site .ow-plan h3 { margin: 0; }
+.ow-site .ow-content .ow-plan-price { font: 1.9rem/1.1 var(--ow-display); color: var(--ow-green); font-variant-numeric: lining-nums tabular-nums; }
+.ow-site .ow-content .ow-plan-price small { font: .95rem/1.4 var(--ow-body); color: var(--ow-muted); }
+.ow-site .ow-plan .ow-button { align-self: flex-start; margin-top: .25rem; }
+.ow-site .ow-plan-setup { color: var(--ow-muted); font-size: .95rem; }
+.ow-badge { align-self: flex-start; background: var(--ow-accent); color: var(--ow-green); border-radius: 999px; padding: .15rem .65rem; font-size: .85rem; font-weight: bold; }
+.ow-site .ow-small { color: var(--ow-muted); font-size: .95rem; margin-top: 1rem; }
+.ow-contact-card { background: var(--ow-surface); border: 1px solid var(--ow-line); border-radius: 6px; padding: 1.25rem; margin-top: 1rem; }
+.ow-site .ow-contact-card p + p { margin-top: .5rem; }
+.ow-footer-legal { margin-top: .5rem; color: var(--ow-muted); font-size: .9rem; }
+.ow-site .ow-content ul { padding-left: 1.25rem; }
+.ow-site .ow-content li + li { margin-top: .35rem; }
+@media (max-width: 760px) { .ow-plans { grid-template-columns: 1fr; } }
