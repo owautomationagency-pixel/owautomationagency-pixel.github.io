@@ -15,3 +15,113 @@
 .ow-site .ow-content ul { padding-left: 1.25rem; }
 .ow-site .ow-content li + li { margin-top: .35rem; }
 @media (max-width: 760px) { .ow-plans { grid-template-columns: 1fr; } }
+
+/* ---- Design review, 23 Nov 2026 ---- */
+
+/* Buttons: visible hover and press; one square corner style */
+.ow-site .ow-button:hover { background: #2b5644; border-color: #2b5644; }
+.ow-site .ow-button:active { background: #0f241c; transform: translateY(1px); }
+.ow-site .ow-button span { transition: transform .16s ease; }
+.ow-site .ow-button:hover span { transform: translateX(3px); }
+.ow-site .ow-inline:hover { color: #3f6650; }
+.ow-plan, .ow-contact-card { border-radius: 0; }
+
+/* Hero: assurances instead of the tiny caption; chat bubbles */
+.ow-site .ow-assurances { list-style: none; padding: 0; margin: 1rem 0 0; display: flex; flex-wrap: wrap; gap: .35rem 1.1rem; font-size: .9rem; color: var(--ow-ink); }
+.ow-site .ow-assurances li { margin: 0; padding-left: 1.25rem; position: relative; }
+.ow-site .ow-assurances li::before { content: '\2713'; position: absolute; left: 0; color: #3f6650; font-weight: 700; }
+.ow-example-name { border-bottom: 1px solid #628273; padding-bottom: .6rem; margin-bottom: .2rem; }
+.ow-example-name span { font-size: .8125rem; }
+.ow-site .ow-example-question { width: fit-content; max-width: 85%; margin: .7rem 0 0 auto; padding: .5rem .8rem; border-top: 0; background: var(--ow-surface); color: var(--ow-ink); border-radius: 14px 14px 4px 14px; }
+.ow-site .ow-example-answer { width: fit-content; max-width: 88%; margin-top: .4rem; padding: .5rem .8rem; background: #2b5242; border-radius: 14px 14px 14px 4px; }
+
+/* What it does: heading on top, three numbered cards */
+.ow-features { grid-template-columns: 1fr; gap: 1.6rem; }
+.ow-site .ow-features h2 { max-width: 20ch; }
+.ow-feature-list { counter-reset: feature; }
+.ow-feature-list article { counter-increment: feature; background: var(--ow-surface); border: 1px solid var(--ow-line); border-top: 3px solid var(--ow-green); padding: 1.25rem 1.3rem 1.4rem; }
+.ow-feature-list h3::before { content: '0' counter(feature); display: block; font: 400 1.6rem/1 var(--ow-display); color: #3f6650; margin-bottom: .55rem; }
+
+/* How the pilot works: big step numbers, CTA after the steps */
+.ow-steps { list-style: none; padding-inline-start: 0; counter-reset: step; }
+.ow-steps li { counter-increment: step; border-top: 2px solid var(--ow-green); padding: 1rem 0 0; }
+.ow-steps li::before { content: counter(step); display: block; font: 400 2.4rem/1 var(--ow-display); color: #3f6650; margin-bottom: .5rem; }
+.ow-site .ow-steps li p + p { margin-top: .5rem; }
+.ow-how .ow-actions { margin-top: 1.6rem; }
+
+/* Who you'll deal with */
+.ow-about { display: grid; grid-template-columns: minmax(170px,.8fr) minmax(0,1.7fr); gap: 1.2rem clamp(2rem, 6vw, 5rem); align-items: start; }
+.ow-site .ow-about p:not(.ow-kicker) { color: var(--ow-ink); font-size: 1.08rem; line-height: 1.7; max-width: 52ch; }
+
+/* FAQ: clear +/- instead of small triangles */
+.ow-faq summary { list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 1rem; min-height: 44px; }
+.ow-faq summary::-webkit-details-marker { display: none; }
+.ow-faq summary::after { content: '+'; font: 400 1.5rem/1 var(--ow-display); color: var(--ow-green); flex: none; }
+.ow-faq details[open] > summary::after { content: '\2212'; }
+.ow-faq summary:hover { text-decoration: underline; text-underline-offset: .3em; }
+
+/* Closing ask: bold green panel */
+.ow-close { background: var(--ow-green); color: var(--ow-surface); border-top: 0; padding: clamp(2rem,4vw,3rem) clamp(1.25rem,4vw,3rem); margin-block: clamp(1.5rem,4vw,3rem); }
+.ow-site .ow-close p { color: #cfdccf; }
+.ow-site .ow-close .ow-assurances { color: var(--ow-surface); }
+.ow-site .ow-close .ow-assurances li::before { color: var(--ow-accent); }
+.ow-site .ow-close .ow-button { background: var(--ow-accent); border-color: var(--ow-accent); color: var(--ow-green); }
+.ow-site .ow-close .ow-button:hover { background: #c4e0a6; border-color: #c4e0a6; }
+.ow-close .ow-button span { color: var(--ow-green); }
+.ow-site .ow-close .ow-inline { color: var(--ow-accent); }
+.ow-close :focus-visible { outline-color: var(--ow-accent); }
+
+/* Pricing: the offer stands out, ticks for what's included */
+.ow-plans { grid-template-columns: minmax(0, 560px); }
+.ow-plan { padding: 1.6rem 1.6rem 1.8rem; gap: .75rem; }
+.ow-site .ow-content .ow-plan-price { font-size: clamp(2.6rem, 6vw, 3.4rem); }
+.ow-site .ow-content .ow-plan-then { font: 1.25rem/1.3 var(--ow-display); color: var(--ow-green); }
+.ow-site .ow-content .ow-plan-then strong { font-weight: 700; }
+.ow-site .ow-content .ow-plan ul { list-style: none; padding: .9rem 0 0; margin: 0; border-top: 1px solid var(--ow-line); }
+.ow-site .ow-content .ow-plan li { position: relative; padding-left: 1.6rem; color: var(--ow-ink); }
+.ow-site .ow-content .ow-plan li::before { content: '\2713'; position: absolute; left: 0; color: #3f6650; font-weight: 700; }
+
+/* Keep price phrases together */
+.ow-nowrap { white-space: nowrap; }
+
+/* Contact: pilot request first, email is the focus */
+.ow-site .ow-content .ow-pilot-request { border-top: 0; margin-top: 1.4rem; padding-top: 0; }
+.ow-contact-card { border-top: 3px solid var(--ow-green); }
+.ow-site .ow-contact-email { font: 1.25rem/1.3 var(--ow-display); overflow-wrap: anywhere; }
+.ow-site .ow-contact-email strong { font: 700 1rem/1.3 var(--ow-body); }
+
+/* Readable text pages: shorter lines, consistent list colour */
+.ow-site main.ow-content > *, .ow-site .ow-content section > *:not(.ow-plans) { max-width: 68ch; }
+.ow-site .ow-content li { color: var(--ow-muted); font-size: .97rem; line-height: 1.65; }
+.ow-site .ow-legal section h2 { font-size: clamp(1.35rem, 2.4vw, 1.75rem); letter-spacing: -.02em; margin-bottom: .5rem; }
+.ow-site .ow-legal p:not(.ow-kicker):not(.ow-lead), .ow-site .ow-legal li { color: var(--ow-ink); font-size: 1.0625rem; line-height: 1.7; }
+.ow-site .ow-legal section { margin-top: 2.2rem; padding-top: 1.4rem; }
+.ow-toc { margin-top: 1.6rem; padding: 1rem 1.2rem; background: var(--ow-soft); border-left: 3px solid var(--ow-green); }
+.ow-site .ow-toc ul { columns: 2 15rem; column-gap: 2rem; list-style: none; padding: 0; margin: .4rem 0 0; }
+.ow-site .ow-toc li { margin: 0; break-inside: avoid; }
+.ow-site .ow-toc li + li { margin-top: 0; }
+.ow-toc a { display: inline-flex; min-height: 44px; align-items: center; }
+
+/* Small text readable outdoors */
+.ow-kicker { font-size: .8125rem; }
+.ow-site .ow-footer { font-size: .875rem; }
+
+@media (max-width: 760px) {
+  .ow-nav a { white-space: nowrap; font-size: .875rem; }
+  .ow-toc { padding: .8rem 1rem; }
+  .ow-toc a { min-height: 32px; padding: .2rem 0; }
+  .ow-about { grid-template-columns: 1fr; }
+}
+@media (max-width: 520px) {
+  .ow-brand { min-height: 44px; }
+  .ow-brand-mark { height: 44px; }
+  .ow-feature-list article + article { border-top: 3px solid var(--ow-green); padding-top: 1.25rem; }
+  .ow-site .ow-button-small { padding: .55rem .7rem; }
+  /* Headline and first button fit on small phones */
+  .ow-site .ow-hero h1 { font-size: clamp(2.4rem, 11vw, 3rem); max-width: none; text-wrap: balance; margin: .6rem 0 .8rem; }
+  .ow-hero h1 br { display: none; }
+  .ow-hero { padding-block: 1.5rem 2rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ow-site .ow-button:active, .ow-site .ow-button:hover span { transform: none; }
+}
