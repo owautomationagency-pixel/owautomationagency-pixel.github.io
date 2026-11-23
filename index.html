@@ -29,7 +29,7 @@
   <header class="ow-header">
     <div class="ow-wrap ow-nav-layout">
       <a class="ow-brand" href="/" aria-label="OW Automation Agency home">
-        <span class="ow-brand-mark" aria-hidden="true">OW<span>↗</span></span>
+        <span class="ow-brand-mark" aria-hidden="true">OW</span>
         <span>Automation<br>Agency</span>
       </a>
       <nav class="ow-nav" aria-label="Main navigation">
@@ -45,7 +45,8 @@
   </header>
 
   <main id="main-content">
-    <section class="ow-wrap ow-hero" aria-labelledby="hero-heading">
+    <section class="ow-hero-band" aria-labelledby="hero-heading">
+     <div class="ow-wrap ow-hero">
       <div class="ow-hero-copy">
         <p class="ow-kicker">For UK car detailers and valeters</p>
         <h1 id="hero-heading">Finish the job. <br>Let your website <br><em>take the enquiry.</em></h1>
@@ -57,9 +58,9 @@
         <ul class="ow-assurances"><li>Free for the first month</li><li>No card needed</li><li>Nothing to cancel if you stop</li></ul>
       </div>
       <figure class="ow-hero-figure">
-        <img src="site-detailing-960.webp" srcset="site-detailing-480.webp 480w, site-detailing-960.webp 960w"
-          sizes="(max-width: 760px) calc(100vw - 40px), (max-width: 1220px) 46vw, 540px"
-          width="960" height="540" fetchpriority="high" alt="A detailer uses a rotary polisher on a car roof">
+        <div class="ow-photo"><img src="site-detailing-960.webp" srcset="site-detailing-480.webp 480w, site-detailing-960.webp 960w"
+          sizes="(max-width: 760px) calc(100vw - 40px), (max-width: 1220px) 50vw, 600px"
+          width="960" height="540" fetchpriority="high" alt="A detailer uses a rotary polisher on a car roof"></div>
         <div class="ow-example" role="group" aria-label="Example conversation (illustrative)">
           <p class="ow-example-name">Example conversation <span>Illustrative</span></p>
           <p class="ow-example-question">How much is an interior deep clean for a large SUV?</p>
@@ -68,6 +69,7 @@
           <p class="ow-example-answer">I’m not sure about that one, so I’ll pass it on. What’s your name and best number?</p>
         </div>
       </figure>
+     </div>
     </section>
 
     <section class="ow-wrap ow-section ow-features" id="what-it-does" aria-labelledby="features-heading">
@@ -77,14 +79,27 @@
       </div>
       <div class="ow-feature-list">
         <article>
+          <div class="ow-vig ow-vig-price" aria-hidden="true">
+            <p class="ow-vig-label">Interior deep clean <span>Example</span></p>
+            <ul><li><span>Small</span><b>£95</b></li><li><span>Medium</span><b>£115</b></li><li class="is-on"><span>Large / SUV</span><b>£135</b></li><li><span>Van</span><b>£150</b></li></ul>
+          </div>
           <h3>Answers from your price list</h3>
           <p>Customers get consistent answers about your services, prices for each vehicle size and your opening hours, using only the information you approve.</p>
         </article>
         <article>
+          <div class="ow-vig ow-vig-slip" aria-hidden="true">
+            <p class="ow-vig-label">New enquiry <span>Example</span></p>
+            <dl><div><dt>Name</dt><dd>Sam</dd></div><div><dt>Number</dt><dd>07700 900123</dd></div><div><dt>Asked</dt><dd>Dog hair, Transit van</dd></div></dl>
+            <p class="ow-vig-saved">Saved for you to follow up</p>
+          </div>
           <h3>Captures enquiries</h3>
           <p>When a customer has a question it can’t answer, or wants you to call back, it takes their name and contact details and saves the enquiry for you to follow up.</p>
         </article>
         <article>
+          <div class="ow-vig ow-vig-slots" aria-hidden="true">
+            <p class="ow-vig-label">Saturday <span>Example</span></p>
+            <ul><li class="is-taken">08:00</li><li>09:30</li><li class="is-on">10:00</li><li class="is-taken">11:30</li><li>13:00</li><li>14:30</li></ul>
+          </div>
           <h3>Helps customers book</h3>
           <p>Customers can choose an available time and confirm their booking, and you can see, move or cancel it. Connecting your own calendar is being finished for pilot businesses.</p>
         </article>
@@ -113,6 +128,7 @@
       </div>
       <div>
         <p>I’m Ollie Wood. I run OW Automation Agency on my own from Harlow, Essex. I set up every assistant myself, check your prices and hours with you before anything goes live, and I answer your emails.</p>
+        <p class="ow-signoff"><span class="ow-avatar" aria-hidden="true">OW</span><span><strong>Ollie Wood</strong><br>Sole trader · Harlow, Essex</span></p>
       </div>
     </section>
 
