@@ -374,3 +374,19 @@ body.ow-site > main { flex: 1 0 auto; }
 @media (max-width: 520px) {
   .ow-plan-featured .ow-badge { text-transform: none; letter-spacing: 0; font-size: .8rem; border-radius: 8px; }
 }
+
+/* Demo video (demo.html) and its teaser on the home page */
+.ow-demo-video { margin: 1.5rem 0 2rem; }
+.ow-demo-video video { display: block; width: 100%; height: auto; border-radius: 10px; background: #0e1d17; box-shadow: 0 12px 40px rgba(15, 32, 25, .18); }
+.ow-demo-video figcaption { margin-top: .6rem; font-size: .9rem; color: #52625a; }
+.ow-demo-steps { padding-left: 1.2rem; }
+.ow-demo-steps li { margin: .5rem 0; }
+.ow-demo-link { display: block; text-decoration: none; }
+.ow-demo-frame { display: block; position: relative; border-radius: 10px; overflow: hidden; box-shadow: 0 12px 40px rgba(15, 32, 25, .18); }
+.ow-demo-frame img { display: block; width: 100%; height: auto; }
+.ow-demo-frame::before { content: ""; position: absolute; inset: 0; background: rgba(14, 29, 23, .28); transition: background .2s; }
+.ow-demo-play { position: absolute; left: 50%; top: 50%; width: 84px; height: 84px; margin: -42px 0 0 -42px; border-radius: 50%; background: rgba(255, 253, 247, .95); box-shadow: 0 6px 24px rgba(0, 0, 0, .3); }
+.ow-demo-play::after { content: ""; position: absolute; left: 34px; top: 26px; border-style: solid; border-width: 16px 0 16px 26px; border-color: transparent transparent transparent #1c3c30; }
+.ow-demo-link:hover .ow-demo-frame::before, .ow-demo-link:focus-visible .ow-demo-frame::before { background: rgba(14, 29, 23, .12); }
+.ow-demo-link .ow-button { margin-top: 1rem; }
+}
